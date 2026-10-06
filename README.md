@@ -28,3 +28,25 @@ sudo systemctl restart fail2ban
 sudo fail2ban-client status sshd
 sudo fail2ban-client -t
 ```
+
+## 3- Proteger por ssh
+```
+ls -la ~/.ssh
+ssh-keygen -lf ~/.ssh/id_ed25519.pub
+ssh-copy-id -i ~/.ssh/id_ed25519.pub root@157.xxx.xxx.xxx
+ssh root@157.xxx.xxx.xxx
+sudo nano /etc/ssh/sshd_config
+
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitRootLogin prohibit-password
+
+sudo sshd -t
+sudo systemctl reload ssh
+sudo sshd -T | grep -E 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication|permitrootlogin'
+```
+
+
+
+

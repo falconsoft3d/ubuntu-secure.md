@@ -1,6 +1,6 @@
 # ubuntu-secure.md
 
-1- Instalar fail2ban
+## 1- Instalar fail2ban
 Fail2ban es una herramienta de seguridad que protege tu servidor bloqueando temporalmente IP que realizan demasiados intentos fallidos de acceso
 
 ```

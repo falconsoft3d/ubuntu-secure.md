@@ -1,4 +1,11 @@
-## 1- Instalar fail2ban
+
+## 1- Actualizar el sistema
+```
+sudo apt update
+sudo apt upgrade
+```
+
+## 2- Instalar fail2ban
 Fail2ban es una herramienta de seguridad que protege tu servidor bloqueando temporalmente IP que realizan demasiados intentos fallidos de acceso
 
 ```

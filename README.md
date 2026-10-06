@@ -1,8 +1,8 @@
 
 ## 1- Actualizar el sistema
 ```
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
+sudo apt autoremove -y
 ```
 
 ## 2- Instalar fail2ban

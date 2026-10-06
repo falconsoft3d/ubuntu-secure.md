@@ -1,3 +1,13 @@
+## Comandos de comprobación.
+```
+sudo ss -lntup
+sudo ufw status verbose
+sudo fail2ban-client status
+sudo systemctl --failed
+sudo apt update
+sudo apt list --upgradable
+```
+
 
 ## 1- Actualizar el sistema
 ```
@@ -47,6 +57,12 @@ sudo systemctl reload ssh
 sudo sshd -T | grep -E 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication|permitrootlogin'
 ```
 
+## 4-Activar actualizaciones automatica de seguridad
+```
+sudo apt install unattended-upgrades -y
+sudo dpkg-reconfigure unattended-upgrades
+systemctl status unattended-upgrades
+```
 
 
 
